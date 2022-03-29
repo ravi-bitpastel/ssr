@@ -11,7 +11,8 @@
         "serve:ssr": "node dist/ssr/server/main.js",
         "build:ssr": "ng build && ng run ssr:server",
         "prerender": "ng run ssr:prerender",
-        "heroku-popstbuild": "ng build --prod"
+        "postinstall": "npm run build:ssr",
+        "start:heroku": "node dist/server"
     },
     "private": true,
     "dependencies": {
